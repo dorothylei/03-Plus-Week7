@@ -1,41 +1,121 @@
 <!doctype html>
+
+<!--
+Steps:
+1. Setup
+2. Design
+3. html
+4. css
+5. Search engine Basic JavaScript
+6. API Integration -->
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
     <title>Plus_7_Homework</title>
   </head>
   <body>
     <div class="weather-app">
-    <header>
-      <form class="search-form" id="search-form">
-        <input type="search" placeholder="eg. Milan" required id="search-form-input" class="search-form-input" />
-        <input type="submit" value="Search" class="search-form-button"/>
-      </form>
-    </header>
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="eg. Milan"
+            required
+            id="search-form-input"
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+      </header>
 
-    <main>
-      <div class="weather-data">
-      <div>
-        <h1 class="weather-city" id="weather-city"></h1>
-        <p class="weather-details">
-          <span id="time"></span> <span id="description"></span>
-          <br />
-          Humidity: <strong id="humidity"></strong>, Wind: <strong id="wind-speed"></strong>
-        </p>
-      </div>
-      <div class="weather-container">
-        <div id="weather-icon"></div>
-        <div class="weather-temperature" id="weather-temperature">12</div>
-        <div class="weather-unit">°C</div>
-      </div>
-      </div>
-    </main>
+      <main>
+        <div class="weather-data">
+          <div>
+            <h1 class="weather-city" id="weather-city"></h1>
+            <p class="weather-details">
+              <span id="time"></span> <span id="description"></span>
+              <br />
+              Humidity: <strong id="humidity"></strong>, Wind:
+              <strong id="wind-speed"></strong>
+            </p>
+          </div>
+
+          <div class="weather-container">
+            <div id="weather-icon"></div>
+            <div class="weather-temperature" id="weather-temperature">12</div>
+            <div class="weather-unit">°C</div>
+          </div>
+        </div>
+
+        <div class="weather-forecast" id="forecast">
+          <!-- 
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Mon</div>
+            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">11°</div>
+              <div class="weather-forecast-temperature">
+                <strong>18°</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Tue</div>
+            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">9°</div>
+              <div class="weather-forecast-temperature">
+                <strong>16°</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Wed</div>
+            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">9°</div>
+              <div class="weather-forecast-temperature">
+                <strong>16°</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Thu</div>
+            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">9°</div>
+              <div class="weather-forecast-temperature">
+                <strong>16°</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">Fri</div>
+            <div class="weather-forecast-icon">🌤️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">9°</div>
+              <div class="weather-forecast-temperature">
+                <strong>16°</strong>
+              </div>
+            </div>
+          </div>
+          -->
+        </div>
+      </main>
 
       <footer>
         Coded by
@@ -51,7 +131,6 @@
           >Netlify</a
         >
       </footer>
-    </div>
     </div>
 
     <script src="src/index.js"></script>
